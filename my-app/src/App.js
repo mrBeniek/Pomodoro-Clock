@@ -1,5 +1,9 @@
 import React from 'react';
 import './App.scss';
+import { SessionLength } from './Components/SessionLength';
+import { BreakLength } from './Components/BreakLength';
+import { Controls } from './Components/Controls';
+import { Display } from './Components/Display';
 
 let secs = 1;
 let mins = 25;
@@ -189,120 +193,5 @@ class App extends React.Component {
     )
   }
 }
-
-class Display extends React.Component {
-  
-  render() {
-   
-    const sess = <div id="timer-label">CURRENT SESSION</div>;
-    const brk = <div id="timer-label">BREAK TIME</div>;       
-        
-    return (
-      <div id="display-container">
-      <div id="title">POMODORO CLOCK</div>
-    <div id="timer-container">
-          
-      <div id="time-left">
-          {this.props.timer}
-        
-        </div>   
-              
-      {this.props.sessionStatus == "session" ? null : brk}
-        
-        
-        </div>
-    </div>
-    )
-  }
-} 
-
-class Controls extends React.Component {
-  
-  render() {
-       
-  
-     
-    return (
-    
-        <div className="controls-container">
-          
-          <div id="start-stop" className="controls-button" onClick={this.props.handleTimer}>
-            PLAY
-          </div>
-          
-          <div id="reset" className="controls-button" onClick={this.props.handleReset}>
-            RESET
-          </div>
-          
-          
-          
-        </div>
-    
-    )
-  }
-} 
-
-
-class BreakLength extends React.Component {
-  
-  render() {
-    return (
-    <div id="break-container" >
-        <div className="center-container">
-                    
-          <div id="break-label" className="label">
-            BREAK LENGTH
-          </div>      
-                
-        </div>
-        
-        <div id="break-controls" className="center-container">
-           <div id="break-decrement" className="button-minus" onClick={this.props.breakDecrement}>
-            -
-          </div>
-          <div className="timer-increment">
-              {this.props.breakLength}
-          </div>
-          <div id="break-increment" className="button-plus" onClick={this.props.breakIncrement}>
-             +
-          </div>
-             </div>
-    </div>
-    )
-  }
-} 
-
-
-
-class SessionLength extends React.Component {
-  
-  render() {
-    return (
-    <div id="session-container">
-        <div className="center-container">
-              
-          <div id="session-label" className="label">
-            SESSION LENGTH
-          </div>
-         
-        </div>
-        
-        <div className="center-container">
-          <div className="button-minus" onClick={this.props.sessionDecrement}>
-            -
-          </div>
-          <div id="session-timer" className="timer-increment">
-              {this.props.sessionLength}
-             </div>
-        <div className="button-plus" onClick={this.props.sessionIncrement}>
-           +
-          </div>
-        </div>
-    </div>
-    )
-  }
-} 
-
-
 
 export default App;
