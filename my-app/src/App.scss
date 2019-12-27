@@ -1,12 +1,27 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
 
+@font-face {font-family: "Tintin Majuscules";
+src: url("//db.onlinewebfonts.com/t/f467350cf09770d20a3a63f7e14b63cb.woff") format("woff") }
+
+@font-face {font-family: "Braeside Outline"; 
+  src: url("//db.onlinewebfonts.com/t/c6d7a00a7e3ee2372005a51d2dbda4cd.woff") format("woff")
+}
+
+@font-face {font-family: "Stencilia-Bold"; 
+  src: url("//db.onlinewebfonts.com/t/dc44e6e79f85f8711b1958c923a9c42c.woff") format("woff")
+}
+
+
+
+
+
 body {
   background-color: #757575;
   font-family: Montserrat, sans-serif;
 }
 
 #main {
-    /* background-color: #212121; */
+   // background-color: #212121;
     display: flex;
     height: 100vh;
     justify-content: center;
@@ -41,7 +56,7 @@ body {
    }
    
    #right-container {
-     background-color: red;
+    background-color: red;
      align-items: center;
      display: flex;
      flex-direction: column;
@@ -70,7 +85,7 @@ body {
    }
    
    #timer-container {
-   /* background-color: blue; */
+  // background-color: blue;
      height: 100%;
      width: 100%;
     display: flex;
@@ -84,6 +99,7 @@ body {
      background-color: #E1F5FE;
      border: solid black 5px;
      border-radius: 50%;
+     font-family: "Stencilia-Bold";
      font-size: 3em;
      padding: 110px;
     

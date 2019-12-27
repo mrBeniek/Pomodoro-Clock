@@ -1,7 +1,6 @@
 import React from 'react';
 export class Display extends React.Component {
   render() {
-    const sess = <div id="timer-label">CURRENT SESSION</div>;
     const brk = <div id="timer-label">BREAK TIME</div>;
     return (<div id="display-container">
       <div id="title">POMODORO CLOCK</div>
