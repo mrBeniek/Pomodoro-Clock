@@ -92,6 +92,7 @@ body {
      @extend .flex-middle;
      background-color: #E1F5FE;
      border: solid black 5px;
+     flex-direction: column;
      width: 100%;
      max-width: 300px;
      height: 100%;
@@ -102,7 +103,21 @@ body {
      
     
    }
+
+   #timer-numbers {
+      margin-top: 44px;
+   }
+
+   #timer-break-hidden {
+    visibility: hidden;
+    font-size: 0.6em;
+    margin-top: 10px;
+   }
    
+   #timer-break {
+     font-size: 0.6em;
+     margin-top: 10px;
+   }
    .controls-container {
      height: 100%;
      width: 100%;

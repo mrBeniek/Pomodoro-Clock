@@ -6,15 +6,15 @@ import { Controls } from './Components/Controls';
 import { Display } from './Components/Display';
 
 let secs = 1;
-let mins = 25;
+let mins = 11;
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      timer: "25:00",
+      timer: "11:00",
       break: 5,
-      session: 25,
+      session: 11,
       sessionStatus: "session",
       status: "stop",
     };
