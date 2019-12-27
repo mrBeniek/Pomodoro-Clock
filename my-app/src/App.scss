@@ -11,7 +11,11 @@ src: url("//db.onlinewebfonts.com/t/f467350cf09770d20a3a63f7e14b63cb.woff") form
   src: url("//db.onlinewebfonts.com/t/dc44e6e79f85f8711b1958c923a9c42c.woff") format("woff")
 }
 
-
+.flex-middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 
 
@@ -45,35 +49,26 @@ body {
    }
    
    #left-container {
+     @extend .flex-middle;
      background-color: #FFF8E1;
      border-right: black solid 5px;
-     display: flex;
      flex-direction: column;
-     justify-content: center;
-     align-items: center;
      width: 100%;
      
    }
    
    #right-container {
-    background-color: red;
-     align-items: center;
-     display: flex;
+     @extend .flex-middle;
+     background-color: red;
      flex-direction: column;
      font-size: 3em;
-     justify-content: center;
-     width: 100%;
-     
-     
+     width: 100%; 
    }
    
-   
    #display-container {
+     @extend .flex-middle;
      height: 100%;
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-     align-items: center;
      flex-shrink: 1;
    }
    
@@ -85,23 +80,26 @@ body {
    }
    
    #timer-container {
-  // background-color: blue;
+     @extend .flex-middle;
+//background-color: blue;
      height: 100%;
      width: 100%;
-    display: flex;
-    flex-direction: column;
-      justify-content: center;
-     align-items: center;
+     flex-direction: column; 
      flex-shrink: 1;
    }
    
    #time-left {
+     @extend .flex-middle;
      background-color: #E1F5FE;
      border: solid black 5px;
+     width: 100%;
+     max-width: 300px;
+     height: 100%;
+     max-height: 300px;
      border-radius: 50%;
      font-family: "Stencilia-Bold";
      font-size: 3em;
-     padding: 110px;
+     
     
    }
    
