@@ -16,12 +16,19 @@ src: url("//db.onlinewebfonts.com/t/f467350cf09770d20a3a63f7e14b63cb.woff") form
 
 }
 
+$session-color: #388E3C;
+$break-color: #D32F2F;
+$label-bg-color: #E1F5FE;
+
 .flex-middle {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.settings-green-font {
+  color: #4CAF50
+}
 
 
 body {
@@ -64,7 +71,6 @@ body {
    
    #right-container {
      @extend .flex-middle;
-     background-color: red;
      flex-direction: column;
      font-size: 3em;
      width: 100%; 
@@ -79,11 +85,12 @@ body {
    }
    
    #title {
+     color: #6200EA;
      height: 100%;
      font-size: 2em;
      font-weight: 600;
      flex-shrink: 7;
-     //font-family: Cubano;
+   
      
    }
    
@@ -98,8 +105,8 @@ body {
    
    #time-left {
      @extend .flex-middle;
-     background-color: #E1F5FE;
-     border: solid black 8px;
+     background-color: $label-bg-color;
+     border: solid 8px;
      flex-direction: column;
      width: 100%;
      max-width: 300px;
@@ -112,7 +119,14 @@ body {
    }
 
    #timer-numbers {
-      margin-top: 44px;
+      margin-top: 47px;
+      color: $session-color;
+
+   }
+
+   #timer-numbers-break {
+    margin-top: 47px;
+    color: $break-color;
    }
 
    #timer-break-hidden {
@@ -122,6 +136,7 @@ body {
    }
    
    #timer-break {
+     color: $break-color;
      font-size: 0.6em;
      margin-top: 10px;
    }
@@ -137,8 +152,8 @@ body {
    }
    
    .controls-button {
-     background-color: #D1C4E9;
-     border: black solid 5px;
+    background-color: $label-bg-color;
+     border: #6200EA solid 5px;
      border-radius: 50px;
      cursor: pointer;
      font-size: 1.5em;
@@ -151,11 +166,13 @@ body {
    }
    
    #start-stop {
-     background-color: #DCEDC8;
+     color: #6200EA;
+    background-color: $label-bg-color;
    }
    
    #reset {
-     background-color: #EF9A9A;
+    color: #6200EA ;
+    background-color: $label-bg-color;
    }
    
    .default-container {
@@ -170,7 +187,7 @@ body {
    
    #break-container {
      @extend .default-container;
-     background-color: #FFEBEE;
+     background-color: #FFF8E1;
      border-bottom: solid black 10px;
      box-sizing: border-box;
      font-family: Cubano;
@@ -179,7 +196,7 @@ body {
    
    #session-container {
      @extend .default-container;
-     background-color: #E8F5E9;
+     background-color: #FFF8E1;
      font-family: Cubano;
    }
    
@@ -196,10 +213,9 @@ body {
      display: flex;
      justify-content: space-around;
      align-items: center;
-     background-color: blue;
-      
+     //background-color: blue;
      max-height: 100px;
-     max-width: 460px;
+     max-width: 483px;
      height: 100%;
      width: 100%;
      
@@ -210,23 +226,12 @@ body {
      @extend #break-controls
    }
 
-   .timer-increment {
-     background-color: purple;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     border: black solid 7px;
-     width: 100%;
-     max-width: 500px;
-     height: 100%;
-     max-height: 30px;
-     padding: 15px;
-   }
+   
    
    .label {
      
      //background-color: red;
-     border: red dashed 7px;
+     border: red solid 7px;
      display: flex;
      justify-content: center;
      height: 100%;
@@ -236,16 +241,43 @@ body {
      max-width: 400px;
      width: 100%
    }
+
    
+   
+   #break-label {
+    background-color: #E1F5FE;
+    border-color: $break-color;
+   
+    color: $break-color;
+    
+   }
+
+   #break-length {
+     color: $break-color;
+   }
+   
+   
+
+   #session-label {
+    background-color: #E1F5FE;
+    border-color: $session-color;
+     color: $session-color;
+   }
+
+   #session-length {
+    color: $session-color;
+   }
+
    .button-plus {
+     background: $label-bg-color;
      display: flex;
      justify-content: center;
      align-items: center;
-     background-color: green;
      cursor: pointer;
      border: solid black 6px;
+     border-radius: 10px;
      padding: 15px;
-     margin-left: 40px;
+     margin-left: 20px;
      width: 100%;
      max-width: 30px;
      max-height: 30px;
@@ -254,11 +286,18 @@ body {
    
    .button-minus {
     @extend .button-plus;
-    background-color: red;
-     margin-right: 40px;
+    
+     margin-right: 20px;
      margin-left: 0px;
    }
    
+   .settings-number {
+     @extend .flex-middle;
+     
+     font-size: 1.5em;
+     width: 100%;
+     max-width: 100px;
+   }
    .timer-increment {
      width: 60px;
      text-align: center;

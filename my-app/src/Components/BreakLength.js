@@ -14,7 +14,7 @@ export class BreakLength extends React.Component {
           <div id="break-decrement" className="button-minus" onClick={this.props.breakDecrement}>
             -
           </div>
-          <div className="timer-increment">
+          <div id="break-length" className="settings-number">
             {this.props.breakLength}
           </div>
           <div id="break-increment" className="button-plus" onClick={this.props.breakIncrement}>
