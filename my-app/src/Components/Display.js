@@ -13,11 +13,6 @@ export class Display extends React.Component {
           </div> 
           {this.props.sessionStatus == "session" ? BRK_HIDDEN : BRK}
         </div>
-          
-        
-
-        
-
 
       </div>
     </div>);

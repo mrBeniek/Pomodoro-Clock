@@ -11,6 +11,11 @@ src: url("//db.onlinewebfonts.com/t/f467350cf09770d20a3a63f7e14b63cb.woff") form
   src: url("//db.onlinewebfonts.com/t/dc44e6e79f85f8711b1958c923a9c42c.woff") format("woff")
 }
 
+@font-face {font-family: Cubano; src:
+  url("//db.onlinewebfonts.com/t/1d65b5646a9a805c62b037be6dd3a0a7.woff") format("woff"),
+
+}
+
 .flex-middle {
   display: flex;
   justify-content: center;
@@ -36,7 +41,7 @@ body {
 
   #main-container {
     /* background-color: #448AFF; */
-      border: solid black 5px;
+      border: solid black 10px;
      display: flex;
      justify-content: space-evenly;
      flex-direction: row;
@@ -51,7 +56,7 @@ body {
    #left-container {
      @extend .flex-middle;
      background-color: #FFF8E1;
-     border-right: black solid 5px;
+     border-right: black solid 10px;
      flex-direction: column;
      width: 100%;
      
@@ -68,6 +73,7 @@ body {
    #display-container {
      @extend .flex-middle;
      height: 100%;
+     width: 100%;
     flex-direction: column;
      flex-shrink: 1;
    }
@@ -75,7 +81,9 @@ body {
    #title {
      height: 100%;
      font-size: 2em;
+     font-weight: 600;
      flex-shrink: 7;
+     //font-family: Cubano;
      
    }
    
@@ -91,16 +99,15 @@ body {
    #time-left {
      @extend .flex-middle;
      background-color: #E1F5FE;
-     border: solid black 5px;
+     border: solid black 8px;
      flex-direction: column;
      width: 100%;
      max-width: 300px;
      height: 100%;
      max-height: 300px;
      border-radius: 50%;
-     font-family: "Stencilia-Bold";
+     font-family: Cubano;
      font-size: 3em;
-     
     
    }
 
@@ -131,14 +138,16 @@ body {
    
    .controls-button {
      background-color: #D1C4E9;
-     border: black solid 3px;
+     border: black solid 5px;
      border-radius: 50px;
      cursor: pointer;
      font-size: 1.5em;
      font-weight: 600;
+     max-width: 90px;
      padding: 10px;
      padding-left: 50px;
      padding-right: 50px;
+     width: 100%;
    }
    
    #start-stop {
@@ -162,41 +171,92 @@ body {
    #break-container {
      @extend .default-container;
      background-color: #FFEBEE;
-     border-bottom: solid black 5px;
+     border-bottom: solid black 10px;
      box-sizing: border-box;
+     font-family: Cubano;
      
    }
    
    #session-container {
      @extend .default-container;
      background-color: #E8F5E9;
+     font-family: Cubano;
    }
    
    .center-container {
-    /* background-color: yellow; */
+    //background-color: yellow;
      height: 100%;
      width: 100%;
      display: flex;
      justify-content: center;
      
    }
+
+   #break-controls {
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     background-color: blue;
+      
+     max-height: 100px;
+     max-width: 460px;
+     height: 100%;
+     width: 100%;
+     
+   }
+
+   #session-controls {
+   
+     @extend #break-controls
+   }
+
+   .timer-increment {
+     background-color: purple;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border: black solid 7px;
+     width: 100%;
+     max-width: 500px;
+     height: 100%;
+     max-height: 30px;
+     padding: 15px;
+   }
    
    .label {
      
-     // background-color: red;
+     //background-color: red;
+     border: red dashed 7px;
+     display: flex;
+     justify-content: center;
      height: 100%;
+    
      margin-top: 20px;
+     max-height: 65px;
+     max-width: 400px;
+     width: 100%
    }
    
    .button-plus {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-color: green;
      cursor: pointer;
+     border: solid black 6px;
+     padding: 15px;
      margin-left: 40px;
+     width: 100%;
+     max-width: 30px;
+     max-height: 30px;
+     height: 100%;
    }
    
    .button-minus {
-    /* border: black solid 2px; */
-     cursor: pointer;
+    @extend .button-plus;
+    background-color: red;
      margin-right: 40px;
+     margin-left: 0px;
    }
    
    .timer-increment {

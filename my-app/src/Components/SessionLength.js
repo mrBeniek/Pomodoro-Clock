@@ -12,15 +12,17 @@ export class SessionLength extends React.Component {
       </div>
 
       <div className="center-container">
-        <div className="button-minus" onClick={this.props.sessionDecrement}>
-          -
+        <div id="session-controls" className="center-container">
+          <div className="button-minus" onClick={this.props.sessionDecrement}>
+            -
           </div>
-        <div id="session-timer" className="timer-increment">
-          {this.props.sessionLength}
+          <div id="session-timer" className="timer-increment">
+            {this.props.sessionLength}
+          </div>
+          <div className="button-plus" onClick={this.props.sessionIncrement}>
+            +
+            </div>
         </div>
-        <div className="button-plus" onClick={this.props.sessionIncrement}>
-          +
-          </div>
       </div>
     </div>);
   }
