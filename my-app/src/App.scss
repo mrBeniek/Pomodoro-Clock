@@ -118,14 +118,18 @@ body {
      max-height: 300px;
      border-radius: 50%;
      font-family: Cubano;
-     font-size: 3em;
+     font-size: 3.7em;
     
+   }
+
+   #timer-break {
+     transform: scale(0.64, 0.64)
    }
 
    #timer-numbers {
       margin-top: 47px;
       color: $session-color;
-
+      
    }
 
    #timer-numbers-break {
@@ -281,7 +285,8 @@ body {
      justify-content: center;
      align-items: center;
      cursor: pointer;
-     border: double black 5px;
+     border: solid black 5px;
+     border-radius: 50%;
      padding: 15px;
      margin-left: 20px;
      width: 100%;
