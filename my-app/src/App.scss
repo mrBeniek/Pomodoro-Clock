@@ -30,6 +30,10 @@ $label-bg-color: #E1F5FE;
   color: #4CAF50
 }
 
+.buttons-margin {
+  margin-bottom: 6px;
+}
+
 
 body {
   background-color: #757575;
@@ -211,6 +215,7 @@ body {
 
    #break-controls {
      display: flex;
+     color: $break-color;
      justify-content: space-around;
      align-items: center;
      //background-color: blue;
@@ -223,7 +228,8 @@ body {
 
    #session-controls {
    
-     @extend #break-controls
+     @extend #break-controls;
+     color: $session-color;
    }
 
    
@@ -270,12 +276,12 @@ body {
 
    .button-plus {
      background: $label-bg-color;
+     background-clip: padding-box;
      display: flex;
      justify-content: center;
      align-items: center;
      cursor: pointer;
-     border: solid black 6px;
-     border-radius: 10px;
+     border: double black 5px;
      padding: 15px;
      margin-left: 20px;
      width: 100%;
@@ -296,6 +302,7 @@ body {
      
      font-size: 1.5em;
      width: 100%;
+     margin-bottom: 8px;
      max-width: 100px;
    }
    .timer-increment {

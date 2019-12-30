@@ -177,7 +177,7 @@ class App extends React.Component {
             <div id="left-container">
               
               <Display timer={this.state.timer} sessionStatus={this.state.sessionStatus} />
-              <Controls handleTimer={this.handleTimer} handleReset={this.handleReset} />
+              <Controls handleTimer={this.handleTimer} handleReset={this.handleReset} status={this.state.status} />
           </div>
           <div id="right-container">
             <BreakLength breakLength={this.state.break} breakDecrement={this.breakDecrement} breakIncrement={this.breakIncrement} />

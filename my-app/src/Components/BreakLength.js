@@ -12,13 +12,13 @@ export class BreakLength extends React.Component {
       <div className="center-container">
         <div id="break-controls" className="center-container">
           <div id="break-decrement" className="button-minus" onClick={this.props.breakDecrement}>
-            -
+          <div className="buttons-margin"> - </div>
           </div>
           <div id="break-length" className="settings-number">
             {this.props.breakLength}
           </div>
           <div id="break-increment" className="button-plus" onClick={this.props.breakIncrement}>
-            +
+          <div className="buttons-margin"> + </div>
           </div>
         </div>
       </div>
