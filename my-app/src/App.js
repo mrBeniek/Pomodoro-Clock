@@ -17,6 +17,7 @@ class App extends React.Component {
       session: 11,
       sessionStatus: "session",
       status: "stop",
+      buttonsDisabled: false,
     };
     this.handleTimer = this.handleTimer.bind(this);
     this.handleReset = this.handleReset.bind(this);
@@ -30,7 +31,9 @@ class App extends React.Component {
   
   
  handleTimer() {
-   
+  console.log("handleTimer initialised")
+  
+
     this.setState( state => {
       if (state.status === "stop") {
         return {status: "play"};
@@ -38,9 +41,13 @@ class App extends React.Component {
         return {status: "stop"};
       }        
     })
-   
+
+    
+
+    console.log("FIRST CHECKPOINT" + "  "  + this.state.status);
 
      let countdown =  setInterval( () => {
+       console.log("SECOND CHECKPOINT" + "   " + this.state.status);
         if (this.state.status == "stop") {
            clearInterval(countdown);
            return
@@ -114,6 +121,8 @@ class App extends React.Component {
     })
       secs = 0;
       mins = 25;
+      console.log("Reset Done")
+      
   }
   
   breakDecrement() {

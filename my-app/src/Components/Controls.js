@@ -1,23 +1,23 @@
 import React from 'react';
-export class Controls extends React.Component {
+export const Controls = (props) => {
  
-  render() {
-    const PLAY = <div id="start-stop" className="controls-button" onClick={this.props.handleTimer}>
+ 
+    const PLAY = <div id="start-stop" className="controls-button" onClick={props.handleTimer}>
     PLAY
       </div>;
-    const PAUSE = <div id="start-stop" className="controls-button" onClick={this.props.handleTimer}>
+    const PAUSE = <div id="start-stop" className="controls-button" onClick={props.handleTimer}>
     PAUSE
       </div>;
     return (<div className="controls-container">
 
-      {this.props.status === "stop" ? PLAY : PAUSE }
+      {props.status === "stop" ? PLAY : PAUSE }
 
-      <div id="reset" className="controls-button" onClick={this.props.handleReset}>
+      <div id="reset" className="controls-button" onClick={props.handleReset}>
         RESET
           </div>
 
 
 
     </div>);
-  }
+  
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 
-export class SessionLength extends React.Component {
-  render() {
+export const SessionLength = (props) => {
+  
     return (<div id="session-container">
       <div className="center-container">
 
@@ -13,20 +13,20 @@ export class SessionLength extends React.Component {
 
       <div className="center-container">
         <div id="session-controls" className="center-container">
-          <div className="button-minus" onClick={this.props.sessionDecrement}>
+          <div className="button-minus" onClick={props.sessionDecrement}>
             <div className="buttons-margin"> - </div>
           </div>
           
             <div id="session-length" className="settings-number">
-              {this.props.sessionLength}
+              {props.sessionLength}
             </div>
             
          
-          <div className="button-plus" onClick={this.props.sessionIncrement}>
+          <div className="button-plus" onClick={props.sessionIncrement}>
           <div className="buttons-margin"> + </div>
             </div>
         </div>
       </div>
     </div>);
-  }
+  
 }
