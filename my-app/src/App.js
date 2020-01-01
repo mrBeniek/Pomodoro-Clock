@@ -6,15 +6,15 @@ import { Controls } from './Components/Controls';
 import { Display } from './Components/Display';
 
 let secs = 1;
-let mins = 11;
+let mins = 25;
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      timer: "11:00",
+      timer: "25:00",
       break: 5,
-      session: 11,
+      session: 25,
       sessionStatus: "session",
       status: "stop",
       buttonsDisabled: false,
@@ -42,7 +42,7 @@ class App extends React.Component {
       }        
     })
 
-    
+    this.handleDisable()
 
     console.log("FIRST CHECKPOINT" + "  "  + this.state.status);
 
@@ -98,6 +98,14 @@ class App extends React.Component {
       }, 1000);
     
   }
+
+  handleDisable() {
+    this.setState({
+      buttonsDisabled: true
+    })
+
+    setTimeout( () => this.setState({buttonsDisabled: false}) , 1000)
+  }
   
   handleStop() {
     this.setState( state => {
@@ -110,6 +118,8 @@ class App extends React.Component {
   }
   
   handleReset() {
+    this.handleDisable()
+
     document.getElementById("beep").pause();
     document.getElementById("beep").currentTime = 0;
     this.setState({
@@ -186,7 +196,7 @@ class App extends React.Component {
             <div id="left-container">
               
               <Display timer={this.state.timer} sessionStatus={this.state.sessionStatus} />
-              <Controls handleTimer={this.handleTimer} handleReset={this.handleReset} status={this.state.status} />
+              <Controls handleTimer={this.handleTimer} handleReset={this.handleReset} status={this.state.status} buttonsDisabled={this.state.buttonsDisabled}/>
           </div>
           <div id="right-container">
             <BreakLength breakLength={this.state.break} breakDecrement={this.breakDecrement} breakIncrement={this.breakIncrement} />
