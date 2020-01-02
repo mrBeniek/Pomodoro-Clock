@@ -19,18 +19,12 @@ class App extends React.Component {
       status: "stop",
       buttonsDisabled: false,
     };
-    this.handleTimer = this.handleTimer.bind(this);
-    this.handleReset = this.handleReset.bind(this);
-    this.breakDecrement = this.breakDecrement.bind(this);
-    this.breakIncrement = this.breakIncrement.bind(this);
-    this.sessionDecrement = this.sessionDecrement.bind(this);
-    this.sessionIncrement = this.sessionIncrement.bind(this);
     
     
   }
   
   
- handleTimer() {
+ handleTimer = () => {
   console.log("handleTimer initialised")
   
 
@@ -99,25 +93,16 @@ class App extends React.Component {
     
   }
 
-  handleDisable() {
+  handleDisable = () => {
     this.setState({
       buttonsDisabled: true
     })
 
     setTimeout( () => this.setState({buttonsDisabled: false}) , 1000)
   }
+
   
-  handleStop() {
-    this.setState( state => {
-      if (state.status === "stop") {
-        return {status: "play"};
-      } else {
-        return {status: "stop"};
-      }        
-    })
-  }
-  
-  handleReset() {
+  handleReset = () => {
     this.handleDisable()
 
     document.getElementById("beep").pause();
@@ -135,21 +120,21 @@ class App extends React.Component {
       
   }
   
-  breakDecrement() {
+  breakDecrement = () => {
     if (this.state.break > 1 && this.state.status == "stop" )
       this.setState({
         break: this.state.break - 1
       })
   }
   
-  breakIncrement() {
+  breakIncrement = () => {
     if (this.state.break < 60 && this.state.status == "stop")
       this.setState({
         break: this.state.break + 1
       })
   }
   
-  sessionDecrement() {
+  sessionDecrement = () => {
     if (this.state.session > 1 && this.state.status == "stop") {
       if (this.state.session < 11) {
         this.setState ({
@@ -168,7 +153,7 @@ class App extends React.Component {
       
   }
   
-  sessionIncrement() {
+  sessionIncrement = () => {
     if (this.state.session < 60 && this.state.status == "stop") {
       if (this.state.session < 9) {
         this.setState ({
