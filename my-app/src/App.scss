@@ -52,7 +52,7 @@ body {
 
   #main-container {
     /* background-color: #448AFF; */
-      border: solid black 10px;
+    border: solid black 10px;
      display: flex;
      justify-content: space-evenly;
      flex-direction: row;
@@ -61,15 +61,32 @@ body {
      max-height: 510px;
      height: 100%;
      box-sizing: border-box;
+     @media screen and (max-width: 860px) {
+       border: none;
+       flex-direction: column;
+       max-width: 500px;
+       max-height: 640px;
+    }
      
    }
    
    #left-container {
      @extend .flex-middle;
      background-color: #FFF8E1;
+     
      border-right: black solid 10px;
      flex-direction: column;
+     
      width: 100%;
+
+     @media screen and (max-width: 860px) {
+      box-sizing: border-box;
+      border: black solid 10px;
+      border-bottom: none;
+      height: 100%;
+     
+     
+   }
      
    }
    
@@ -78,6 +95,13 @@ body {
      flex-direction: column;
      font-size: 3em;
      width: 100%; 
+
+     @media screen and (max-width: 860px) {
+       max-height: 150px;
+      
+     }
+
+     
    }
    
    #display-container {
@@ -86,6 +110,12 @@ body {
      width: 100%;
     flex-direction: column;
      flex-shrink: 1;
+     
+     @media screen and (max-width: 860px) {
+      max-height: 500px;
+      flex-shrink: 3
+    }
+     
    }
    
    #title {
@@ -94,17 +124,26 @@ body {
      font-size: 2em;
      font-weight: 600;
      flex-shrink: 7;
-   
+     @media screen and (max-width: 860px) {
+      font-size: 1.5em;
+      
+    }
      
    }
    
    #timer-container {
      @extend .flex-middle;
-//background-color: blue;
+  //background-color: blue;
      height: 100%;
      width: 100%;
      flex-direction: column; 
      flex-shrink: 1;
+     @media screen and (max-width: 860px) {
+      max-height: 350px;
+      max-width: 350px;
+      
+      
+    }
    }
    
    #time-left {
@@ -119,6 +158,12 @@ body {
      border-radius: 50%;
      font-family: Cubano;
      font-size: 3.7em;
+     
+     @media screen and (max-width: 860px) {
+      max-height: 300px;
+      max-width: 300px;
+      
+    }
     
    }
 
@@ -151,12 +196,17 @@ body {
    .controls-container {
      height: 100%;
      width: 100%;
-     /* background-color: white; */
+     //background-color: white;
      display: flex;
      justify-content: space-around;
      margin: 20px;
      flex-shrink: 5;
      text-align: center;
+     @media screen and (max-width: 860px) {
+      flex-shrink: 7.5;
+      margin-top: 10px;
+     }
+    
    }
    
    .controls-button {
@@ -171,6 +221,20 @@ body {
      padding-left: 50px;
      padding-right: 50px;
      width: 100%;
+
+     @media screen and (max-width: 860px) {
+      display: flex;
+      justify-content: center;
+      font-size: 1.4em;
+      min-width: 60px;
+      max-width: 100px;
+      max-height: 26px;
+      padding: 10px;
+      padding-left: 30px;
+      padding-right: 30px;
+      
+      
+    }
    }
    
    #start-stop {
@@ -199,6 +263,12 @@ body {
      border-bottom: solid black 10px;
      box-sizing: border-box;
      font-family: Cubano;
+
+     @media screen and (max-width: 860px) {
+      border: solid black 10px;
+      border-bottom: solid black 5px;
+         
+   }
      
    }
    
@@ -206,6 +276,12 @@ body {
      @extend .default-container;
      background-color: #FFF8E1;
      font-family: Cubano;
+     @media screen and (max-width: 860px) {
+      border: solid black 10px;
+      border-top: solid black 5px;
+      box-sizing: border-box;
+      
+   }
    }
    
    .center-container {
@@ -214,6 +290,8 @@ body {
      width: 100%;
      display: flex;
      justify-content: center;
+
+   
      
    }
 
@@ -227,6 +305,12 @@ body {
      max-width: 483px;
      height: 100%;
      width: 100%;
+     @media screen and (max-width: 860px) {
+      max-height: 70px;
+      margin-bottom: 15px;
+      margin-top: 5px;
+      
+    }
      
    }
 
@@ -249,7 +333,12 @@ body {
      margin-top: 20px;
      max-height: 65px;
      max-width: 400px;
-     width: 100%
+     width: 100%;
+     @media screen and (max-width: 860px) {
+      font-size: 0.7em;
+      max-height: 47px;
+      
+    }
    }
 
    
@@ -293,6 +382,12 @@ body {
      max-width: 30px;
      max-height: 30px;
      height: 100%;
+     @media screen and (max-width: 860px) {
+      font-size: 0.8em;
+      max-width: 20px;
+      max-height: 20px;
+      
+    }
    }
    
    .button-minus {
@@ -309,9 +404,12 @@ body {
      width: 100%;
      margin-bottom: 8px;
      max-width: 100px;
+     @media screen and (max-width: 860px) {
+      font-size: 1.1em;
+      
+    }
    }
    .timer-increment {
      width: 60px;
      text-align: center;
    }
-   
