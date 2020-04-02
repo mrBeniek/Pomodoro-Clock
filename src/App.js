@@ -38,18 +38,18 @@ class App extends React.Component {
 
     this.handleDisable()
 
-    console.log("FIRST CHECKPOINT" + "  "  + this.state.status);
+    //console.log("FIRST CHECKPOINT" + "  "  + this.state.status);
 
      let countdown =  setInterval( () => {
-       console.log("SECOND CHECKPOINT" + "   " + this.state.status);
-        if (this.state.status == "stop") {
+       //console.log("SECOND CHECKPOINT" + "   " + this.state.status);
+        if (this.state.status === "stop") {
            clearInterval(countdown);
            return
         }
        
         if (!secs && !mins) {
           document.getElementById("beep").play();
-          if (this.state.sessionStatus == "session") {
+          if (this.state.sessionStatus === "session") {
             mins = this.state.break;
             secs = 1;
             this.setState({
@@ -73,7 +73,7 @@ class App extends React.Component {
        
        if (mins < 10 && secs < 10) {
          this.setState({
-          timer: "0" + mins + ":" + "0" + secs
+          timer: "0" + mins + ":0" + secs
         });
        }
        else if (mins < 10) {
@@ -83,7 +83,7 @@ class App extends React.Component {
        } 
        else if (secs < 10) {
          this.setState({
-          timer: mins + ":" + "0" + secs
+          timer: mins + ":0" + secs
         });
        } else
         this.setState({
@@ -121,21 +121,21 @@ class App extends React.Component {
   }
   
   breakDecrement = () => {
-    if (this.state.break > 1 && this.state.status == "stop" )
+    if (this.state.break > 1 && this.state.status === "stop" )
       this.setState({
         break: this.state.break - 1
       })
   }
   
   breakIncrement = () => {
-    if (this.state.break < 60 && this.state.status == "stop")
+    if (this.state.break < 60 && this.state.status === "stop")
       this.setState({
         break: this.state.break + 1
       })
   }
   
   sessionDecrement = () => {
-    if (this.state.session > 1 && this.state.status == "stop") {
+    if (this.state.session > 1 && this.state.status === "stop") {
       if (this.state.session < 11) {
         this.setState ({
          session: this.state.session - 1,
@@ -154,7 +154,7 @@ class App extends React.Component {
   }
   
   sessionIncrement = () => {
-    if (this.state.session < 60 && this.state.status == "stop") {
+    if (this.state.session < 60 && this.state.status === "stop") {
       if (this.state.session < 9) {
         this.setState ({
          session: this.state.session + 1,
