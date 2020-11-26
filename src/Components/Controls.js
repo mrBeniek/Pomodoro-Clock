@@ -1,25 +1,24 @@
 import React from 'react';
-export const Controls = (props) => {
- 
-  const DISABLED = props.buttonsDisabled ? null : props.handleTimer;
-  const DISABLED_RESET = props.buttonsDisabled ? null : props.handleReset;  
-    const PLAY = <div id="start-stop" className="controls-button" onClick={DISABLED}>
-    PLAY
-      </div>;
-    const PAUSE = <div id="start-stop" className="controls-button" onClick={DISABLED}>
-    PAUSE
-      </div>;
-    
-    return (<div className="controls-container">
 
-      {props.status === "stop" ? PLAY : PAUSE }
-
-      <div id="reset" className="controls-button" onClick={DISABLED_RESET}>
+const Controls = ({disabled, disabledReset, controlsLabel }) => {
+  return (
+    <div className="controls-container">
+      <div 
+        id="start-stop"
+        className="controls-button"
+        onClick={disabled}
+      >
+        {controlsLabel}
+      </div>
+      <div
+        id="reset" 
+        className="controls-button" 
+        onClick={disabledReset}
+      >
         RESET
-          </div>
-
-
-
-    </div>);
-  
+      </div>
+    </div>
+  )
 }
+
+export default Controls
