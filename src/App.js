@@ -109,7 +109,7 @@ const App = () => {
   }
 
   const sessionDecrement = () => dispatch => {
-    if (sessionState > 1 && statusState === 'stop') {
+    if (sessionState > 1 && statusState === 'stop' && sessionStatusState !== 'break') {
       dispatch(sessionDec());
       dispatch(timeSessionDec(sessionState));
       setMins(mins - 1);
@@ -117,7 +117,7 @@ const App = () => {
   }
 
   const sessionIncrement = () => dispatch => {
-    if (sessionState < 60 && statusState === 'stop') {
+    if (sessionState < 60 && statusState === 'stop' && sessionStatusState !== 'break') {
       dispatch(sessionInc());
       dispatch(timeSessionInc(sessionState));
       setMins(mins + 1);
