@@ -93,7 +93,6 @@ const App = () => {
 
     setSecs(0);
     setMins(25)
-
   }
 
   const breakDecrement = () => {
