@@ -1,18 +1,23 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
 
-@font-face {font-family: "Tintin Majuscules";
-src: url("//db.onlinewebfonts.com/t/f467350cf09770d20a3a63f7e14b63cb.woff") format("woff") }
-
-@font-face {font-family: "Braeside Outline"; 
-  src: url("//db.onlinewebfonts.com/t/c6d7a00a7e3ee2372005a51d2dbda4cd.woff") format("woff")
+@font-face {
+  font-family: "Tintin Majuscules";
+  src: url("./assets/Tintin Majuscules.woff") format("woff")
 }
 
-@font-face {font-family: "Stencilia-Bold"; 
-  src: url("//db.onlinewebfonts.com/t/dc44e6e79f85f8711b1958c923a9c42c.woff") format("woff")
+@font-face {
+  font-family: "Braeside Outline"; 
+  src: url("./assets/Braeside Outline.woff") format("woff")
 }
 
-@font-face {font-family: Cubano; src:
-  url("//db.onlinewebfonts.com/t/1d65b5646a9a805c62b037be6dd3a0a7.woff") format("woff"),
+@font-face {
+  font-family: "Stencilia-Bold"; 
+  src: url("./assets/Stencilia-Bold.woff") format("woff")
+}
+
+@font-face {
+  font-family: Cubano; 
+  src: url("./assets/Cubano.woff") format("woff"),
 }
 
 $session-color: #388E3C;
